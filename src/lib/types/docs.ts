@@ -1,3 +1,5 @@
+import type { Component } from "svelte";
+
 export type Metadata = {
     title: string;
     description: string;
@@ -38,7 +40,7 @@ export type FrontMatter = {
 };
 
 export type DocFile = {
-    default: import('svelte').ComponentType;
+    default: Component
     metadata: FrontMatter;
 };
 

@@ -1,19 +1,35 @@
 import { type Icon as IconType } from 'lucide-svelte';
 
 
-export type NavItem = {
+export interface NavItem {
     title: string;
     href?: string;
     disabled?: boolean;
     external?: boolean;
-    icon?: typeof IconType;
+    icon?: any;
     label?: string;
+    items?: NavItem[];
 };
 
-export type SidebarNavItem = NavItem & {
-    items: SidebarNavItem[];
-};
+export interface SocialLink {
+    title: string;
+    href: string;
+    icon: keyof Icons;
+}
 
-export type NavItemWithChildren = NavItem & {
-    items: NavItemWithChildren[];
-};
+export interface Icons {
+    twitter: string;
+    github: string;
+    facebook: string;
+    instagram: string;
+    linkedin: string;
+    youtube: string;
+    tiktok: string;
+    snapchat: string;
+}
+
+
+export interface QuickLink {
+    title: string;
+    href: string;
+}
