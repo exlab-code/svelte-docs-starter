@@ -1,9 +1,6 @@
-import { generateNavigation } from "$lib/utils";
+import { docsNavigation } from "$lib/components/doc-navigation.svelte";
 
 export async function load() {
-    const docNav = await generateNavigation();
-    console.log(docNav);
-    return {
-        docNav
-    };
+    await docsNavigation.generateNavigation();
+
 }

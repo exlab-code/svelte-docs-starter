@@ -56,3 +56,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  scroll-padding-top: 6rem; 
+  scroll-behavior: smooth;
+}

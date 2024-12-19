@@ -45,7 +45,7 @@
 	});
 </script>
 
-<div class="sticky top-16 min-w-56">
+<div>
 	<h5
 		id="docs-on-this-page-sidebar-label"
 		class="mb-3 text-sm font-semibold text-gray-800 dark:text-neutral-300"

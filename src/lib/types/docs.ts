@@ -26,22 +26,22 @@ export type Metadata = {
     };
 };
 
-export type FrontMatter = {
+export type DocMeta = {
     title: string;
     description: string;
     slug: string;
     component: boolean;
     source: string;
-    external?: {
-        project: string;
-        url: string;
-    };
     bits?: string;
+    icon?: string
+    label?: string
+    disabled?: false
+    external?: false
 };
 
 export type DocFile = {
     default: Component
-    metadata: FrontMatter;
+    metadata: DocMeta;
 };
 
 export type DocResolver = () => Promise<DocFile>;

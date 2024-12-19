@@ -47,13 +47,20 @@ interface SiteConfig {
     /** Path to the site favicon */
     favicon: string;
 }
-
+interface PromoConfig {
+    title: string;
+    description: string;
+    ctaText: string;
+    ctaLink: string;
+    lightImage?: string;
+    darkImage?: string;
+}
 export const siteConfig: SiteConfig = {
     version: '1.0.0',
     title: 'Documentation',
     description:
         'Comprehensive documentation for your project. Built with Svelte 5, MDSvex, Tailwind CSS, and shadcn/ui components.',
-    github: 'https://github.com/yourusername/project',
+    github: 'https://github.com/code-gio/documentation',
     npm: 'your-package-name',
 
     quickLinks: [
@@ -103,7 +110,7 @@ export let socialLinks: SocialLink[] = [
     },
     {
         title: 'GitHub',
-        href: 'https://github.com',
+        href: 'https://github.com/code-gio/documentation',
         icon: 'github'
     },
 
@@ -132,3 +139,15 @@ export const features: Feature[] = [
         description: 'Powered by Svelte 5, MDSvex, and TailwindCSS for optimal performance and developer experience'
     }
 ];
+
+
+
+export let promoConfig: PromoConfig = {
+    title: 'Need help with your project?',
+    description:
+        'I offer custom development services, consulting, and technical guidance for your web applications.',
+    ctaText: "Let's work together",
+    ctaLink: 'mailto:your@email.com',
+    lightImage: '/images/dev-services-light.jpg',
+    darkImage: '/images/dev-services-dark.jpg'
+};

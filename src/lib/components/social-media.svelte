@@ -2,6 +2,7 @@
 <script lang="ts">
 	import { socialLinks } from '$lib/config';
 	import type { Icons } from '$lib/types/nav';
+	import Button from './ui/button/button.svelte';
 
 	const icons: Icons = {
 		twitter:
@@ -24,10 +25,11 @@
 </script>
 
 <!-- Social Icons -->
-<div class="space-x-2 md:text-end">
+<div>
 	{#each socialLinks as { title, href, icon }}
-		<a
-			class="inline-flex size-8 items-center justify-center gap-x-2 rounded-full border border-transparent text-sm font-semibold text-gray-500 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+		<Button
+			size="icon"
+			variant="ghost"
 			{href}
 			target="_blank"
 			rel="noopener noreferrer"
@@ -43,19 +45,13 @@
 			>
 				<path d={icons[icon]} />
 			</svg>
-		</a>
+		</Button>
 	{/each}
 </div>
 
 <!-- End Social Icons -->
 
 <style>
-	/* Optional: Add any additional custom styles here */
-	.size-8 {
-		width: 2rem;
-		height: 2rem;
-	}
-
 	.size-3\.5 {
 		width: 0.875rem;
 		height: 0.875rem;
