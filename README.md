@@ -2,7 +2,7 @@
 
 A modern documentation template built with Svelte 5, MDSvex, and Tailwind CSS.
 
-![Template Preview](https://svelte-docs.codegio.com/)
+[Template Preview](https://svelte-docs.codegio.com/)
 
 ## Overview
 
