@@ -64,16 +64,18 @@
 				<ChevronRight class="size-4" />
 			</Button>
 
-			<Button variant="outline" class="font-mono" onclick={copyNpmCommand}>
-				{npmCommand}
-				<span class="ml-2 rounded bg-gray-200 p-1 dark:bg-neutral-700">
-					{#if isCopied}
-						<Check class="size-4 text-green-500 transition-transform" />
-					{:else}
-						<Clipboard class="size-4 transition-transform hover:rotate-6" />
-					{/if}
-				</span>
-			</Button>
+			{#if siteConfig.npm !== ''}
+				<Button variant="outline" class="font-mono" onclick={copyNpmCommand}>
+					{npmCommand}
+					<span class="ml-2 rounded bg-gray-200 p-1 dark:bg-neutral-700">
+						{#if isCopied}
+							<Check class="size-4 text-green-500 transition-transform" />
+						{:else}
+							<Clipboard class="size-4 transition-transform hover:rotate-6" />
+						{/if}
+					</span>
+				</Button>
+			{/if}
 		</div>
 
 		<!-- Quick Links -->

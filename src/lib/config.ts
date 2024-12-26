@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
     description:
         'Comprehensive documentation for your project. Built with Svelte 5, MDSvex, Tailwind CSS, and shadcn/ui components.',
     github: 'https://github.com/code-gio/svelte-firekit-docs',
-    npm: 'svelte-firekit-docs',
+    npm: '',
 
     quickLinks: [
         { title: 'Customize', href: '/docs/customize' },
