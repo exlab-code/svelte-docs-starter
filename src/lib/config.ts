@@ -1,71 +1,25 @@
 
-import type { NavItem, QuickLink, SocialLink } from "$lib/types/nav";
+import type { NavItem, SocialLink } from "$lib/types/nav";
 
 import {
-
-    type Icon as IconType,
     Boxes,
-    Lock,
     Paintbrush,
     Workflow,
     Zap
 } from 'lucide-svelte';
-
-interface Feature {
-    icon: typeof IconType;
-    title: string;
-    description: string;
-}
-
-interface SiteConfig {
-    /** Current version of the documentation/project */
-    version: string;
-
-    /** Main title of the documentation site */
-    title: string;
-
-    /** Detailed description of the project/documentation */
-    description: string;
-
-    /** GitHub repository URL */
-    github: string;
-
-    /** NPM package name */
-    npm: string;
+import type { Feature, PromoConfig, SiteConfig } from "./types/config";
 
 
-
-    /** Array of quick navigation links */
-    quickLinks: QuickLink[];
-
-    /** Path to the main logo (light theme) */
-    logo: string;
-
-    /** Path to the dark theme logo (optional) */
-    logoDark?: string;
-
-    /** Path to the site favicon */
-    favicon: string;
-}
-interface PromoConfig {
-    title: string;
-    description: string;
-    ctaText: string;
-    ctaLink: string;
-    lightImage?: string;
-    darkImage?: string;
-}
 export const siteConfig: SiteConfig = {
-    version: '1.0.0',
+    version: '0.0.1',
     title: 'Documentation',
     description:
         'Comprehensive documentation for your project. Built with Svelte 5, MDSvex, Tailwind CSS, and shadcn/ui components.',
-    github: 'https://github.com/code-gio/documentation',
-    npm: 'your-package-name',
+    github: 'https://github.com/code-gio/svelte-firekit-docs',
+    npm: 'svelte-firekit-docs',
 
     quickLinks: [
-        { title: 'Installation', href: '/docs/installation' },
-
+        { title: 'Customize', href: '/docs/customize' },
         { title: 'Examples', href: '/docs/examples' }
     ],
     logo: '/logo.svg',
@@ -76,29 +30,10 @@ export const siteConfig: SiteConfig = {
 
 export let navItems: NavItem[] = [
     {
-        title: 'Home',
-        href: '/'
+        title: 'Docs',
+        href: '/docs'
     },
-    {
-        title: 'About',
-        href: '/about'
-    },
-    {
-        title: 'Services',
-        href: '/services',
-        items: [
-            { title: 'Web Development', href: '/services/web-development' },
-            { title: 'SEO', href: '/services/seo' }
-        ]
-    },
-    {
-        title: 'Blog',
-        href: '/blog'
-    },
-    {
-        title: 'Contact',
-        href: '/contact'
-    }
+
 ];
 
 export let socialLinks: SocialLink[] = [
@@ -110,7 +45,7 @@ export let socialLinks: SocialLink[] = [
     },
     {
         title: 'GitHub',
-        href: 'https://github.com/code-gio/documentation',
+        href: 'https://github.com/code-gio',
         icon: 'github'
     },
 
@@ -140,14 +75,12 @@ export const features: Feature[] = [
     }
 ];
 
-
-
 export let promoConfig: PromoConfig = {
     title: 'Need help with your project?',
     description:
         'I offer custom development services, consulting, and technical guidance for your web applications.',
     ctaText: "Let's work together",
-    ctaLink: 'mailto:your@email.com',
+    ctaLink: 'mailto:info@codegio.com',
     lightImage: '/images/dev-services-light.jpg',
     darkImage: '/images/dev-services-dark.jpg'
 };

@@ -25,7 +25,7 @@
 </script>
 
 <!-- Social Icons -->
-<div>
+<div class="flex">
 	{#each socialLinks as { title, href, icon }}
 		<Button
 			size="icon"

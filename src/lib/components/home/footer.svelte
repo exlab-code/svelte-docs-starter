@@ -4,7 +4,7 @@
 </script>
 
 <footer class="mx-auto mt-auto w-full max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8">
-	<div class="grid grid-cols-1 items-center gap-5 md:grid-cols-3">
+	<div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
 		<div>
 			<a href="/">
 				<img src={siteConfig.logo} alt={siteConfig.title} class="h-6 dark:hidden" />

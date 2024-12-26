@@ -2,11 +2,11 @@
 	import AppSidebar from '$lib/components/app-sidebar.svelte';
 	import Breadcrumb from '$lib/components/breadcrumb.svelte';
 	import DarkModeToggle from '$lib/components/dark-mode-toggle.svelte';
+	import SearchBar from '$lib/components/search-bar.svelte';
 	import SocialMedia from '$lib/components/social-media.svelte';
 	import { Separator } from '$lib/components/ui/separator/index.js';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
-	import type { PageData } from './$types.js';
-	let { data, children }: { data: PageData; children: any } = $props();
+	let { children }: { children: any } = $props();
 </script>
 
 <Sidebar.Provider>
@@ -22,11 +22,14 @@
 			</div>
 
 			<div class="flex items-center gap-2">
-				<SocialMedia />
+				<SearchBar />
+				<div class="hidden sm:block">
+					<SocialMedia />
+				</div>
 				<DarkModeToggle />
 			</div>
 		</header>
-		<div class="flex flex-1 flex-col gap-4 p-4">
+		<div class="flex flex-col gap-4 p-4">
 			{@render children()}
 		</div>
 	</Sidebar.Inset>

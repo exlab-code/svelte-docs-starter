@@ -60,6 +60,54 @@ const config: Config = {
 					ring: "hsl(var(--sidebar-ring))",
 				},
 			},
+			typography: {
+				DEFAULT: {
+					css: {
+						'code::before': {
+							content: '""'
+						},
+						'code::after': {
+							content: '""'
+						},
+						'code': {
+							backgroundColor: 'hsl(var(--muted))',
+							color: 'hsl(var(--foreground))',
+							padding: '0.25rem 0.375rem',
+							borderRadius: '0.25rem',
+							fontWeight: '400',
+							fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace'
+						},
+						'pre': {
+							backgroundColor: 'hsl(var(--muted))',
+							color: 'hsl(var(--foreground))',
+							borderRadius: 'var(--radius)',
+							overflowX: 'auto'
+						},
+						'pre code': {
+							backgroundColor: 'transparent',
+							padding: '0',
+							color: 'inherit',
+							fontSize: '0.875rem',
+							lineHeight: '1.7142857'
+						},
+						'--tw-prose-body': 'hsl(var(--foreground))',
+						'--tw-prose-headings': 'hsl(var(--foreground))',
+						'--tw-prose-links': 'hsl(var(--primary))',
+						'--tw-prose-bold': 'hsl(var(--foreground))',
+						'--tw-prose-counters': 'hsl(var(--muted-foreground))',
+						'--tw-prose-bullets': 'hsl(var(--muted-foreground))',
+						'--tw-prose-hr': 'hsl(var(--border))',
+						'--tw-prose-quotes': 'hsl(var(--foreground))',
+						'--tw-prose-quote-borders': 'hsl(var(--border))',
+						'--tw-prose-captions': 'hsl(var(--muted-foreground))',
+						'--tw-prose-kbd': 'hsl(var(--foreground))',
+						'--tw-prose-kbd-shadows': 'hsl(var(--border))',
+						'--tw-prose-code': 'hsl(var(--foreground))',
+						'--tw-prose-th-borders': 'hsl(var(--border))',
+						'--tw-prose-td-borders': 'hsl(var(--border))',
+					}
+				}
+			},
 			borderRadius: {
 				xl: "calc(var(--radius) + 4px)",
 				lg: "var(--radius)",
