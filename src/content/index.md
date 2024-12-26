@@ -17,7 +17,7 @@ Before you begin, ensure you have:
 
 ## Quick Start
 
-1. Click the green **"Use this template"** button at the top of this page
+1. Go to [GitHub](https://github.com/code-gio/svelte-docs-starter)  click the green **"Use this template"** button at the top of this page
 2. Select **"Create a new repository"**
 3. Name your repository and choose its visibility
 4. Click **"Create repository from template"**
@@ -80,11 +80,10 @@ Import and use Svelte components directly in your markdown:
 
 - Browse the [Examples](/docs/examples) to see what you can build
 - Learn about customization in our [Customization Guide](/docs/customize)
-- Check out our [Component Documentation](/docs/components)
-- Join our community on [GitHub](https://github.com/yourusername/your-repo-name)
+- Check out our [Component Styling](/docs/styling/theme)
 
 ## Need Help?
 
 - Browse our [documentation](/docs)
-- Report issues on [GitHub](https://github.com/yourusername/your-repo-name/issues)
+- Report issues on [GitHub](https://github.com/code-gio/svelte-docs-starter/issues)
 - Check out the [examples](/docs/examples) for inspiration
