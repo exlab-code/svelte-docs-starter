@@ -6,15 +6,15 @@
 
 <div>
 	<div class="mt-4">
-		<h3 class="font-semibold text-gray-800 dark:text-white">
+		<h3 class=" font-semibold">
 			{promoConfig.title}
 		</h3>
-		<p class="mt-2 text-sm text-gray-600 dark:text-neutral-300">
+		<p class="mt-2 text-sm">
 			{promoConfig.description}
 		</p>
 		<Button variant="link" href={promoConfig.ctaLink} class="p-0">
 			{promoConfig.ctaText}
-			<ArrowRight class="size-4 transition-transform group-hover:translate-x-1" />
+			<ArrowRight />
 		</Button>
 	</div>
 </div>
