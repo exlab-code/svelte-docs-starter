@@ -1,20 +1,19 @@
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', '.md'], // Tell SvelteKit to recognize .md files
-
+	extensions: ['.svelte', '.md', '.svx'],
 	preprocess: [
-		vitePreprocess(),
+		vitePreprocess({}),
 		mdsvex({
-			extensions: ['.md'] // Tell Mdsvex to handle .md files
+			extensions: ['.md', '.svx']
 		})
 	],
 
 	kit: {
-		adapter: adapter() // Keep the node adapter from our previous fix
+		adapter: adapter()
 	}
 };
 
